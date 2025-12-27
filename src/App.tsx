@@ -3,10 +3,14 @@ import './App.css'
 import TasksCard from './components/TasksCard'
 import Form from './components/Form'
 import { useLocalStorage } from './hooks/useLocalStorage'
+import type { Task } from './types'
 
 function App() {
   const [task, setTask] = useState("")
-  const [tasks, setTasks] = useLocalStorage("tasks", []);
+  const [tasks, setTasks] = useLocalStorage<Task[]>({
+    key: "tasks",
+    initialValue: []
+  });
 
   return (
     <>
