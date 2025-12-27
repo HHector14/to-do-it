@@ -1,10 +1,10 @@
 import Task from "./Task";
 import '../App.css'
 import useHandleTask from "../hooks/useHandleTask";
+import type { TaskCard } from "../types/components";
 
-export default function TasksCard({ tasks, setTasks }) {
-  const { deleteTasksFinished, getTotalTasksFinished } = useHandleTask(tasks, setTasks);
-
+export default function TasksCard({ tasks, setTasks }: TaskCard) {
+  const { getTotalTasksFinished } = useHandleTask({tasks, setTasks});
   return (
     <div className='section'>
       <h1>TO DO IT</h1>
