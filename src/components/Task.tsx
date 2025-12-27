@@ -1,9 +1,9 @@
-import { useState } from "react";
 import useHandleTask from "../hooks/useHandleTask";
+import type { TaskComponent } from "../types/components";
 
-export default function Task({ index,item, tasks, setTasks }) {
-  const [completed, setCompleted] = useState(item[1]);
-  const {deleteTask, changeStatusTask} = useHandleTask(tasks, setTasks);
+export default function Task({ index,item, tasks, setTasks }: TaskComponent) {
+  const completed = item[1];
+  const {deleteTask, changeStatusTask} = useHandleTask({tasks, setTasks});
 
   return (
     <>
@@ -12,7 +12,7 @@ export default function Task({ index,item, tasks, setTasks }) {
           {completed ? '' : '- '}
           {item[0].toUpperCase()}</p>
         <button className={completed ? "warning" : "tercary"}
-          onClick={() => changeStatusTask(setCompleted, index)} >
+          onClick={() => changeStatusTask(index)} >
           {completed ? 'UNDO' : 'DONE'}
         </button>
         <button className="delete" onClick={() => deleteTask(item)} >DELETE</button>
