@@ -18,6 +18,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -46,22 +47,118 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+.section {
+  width: 550px;
+  background-color: black;
+  margin: 0 30px;
+  border-radius: 12px;
+  padding-bottom: 10px;
+}
+
+.section-small {
+  width: 550px;
+  height: fit-content;
+  background-color: black;
+  margin: 0 30px;
+  border-radius: 12px;
+  padding-bottom: 10px;
+}
+
+.inputText {
+  max-width: 500px;
+  max-height: 300px;
+  min-width: 450px;
+  min-height: 40px;
+  width: 85%;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  background-color: #181818;
+  border: 2px solid #000;
+  color: #CFCFCF;
+  padding: 4px 10px;
+  border-radius: 12px;
+
+}
+
+.task p {
+  width: 55%;
+  text-align: left;
+  color: #CFCFCF;
+  margin: 0px 15px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.task p.task-completed {
+  color: #676767;
+  text-decoration: line-through;
+
+}
+
+.task button {
+  width: auto;
+  height: 40px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+
+  .task button {
+    background-color: #f9f9f9;
+
+  }
+
+  .task p {
+    color: #213547;
+  }
+
+  .task p.task-completed {
+    color: #a9a9a9;
+  }
+
+  .inputText {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    color: #213547;
+
+  }
+
+  .section {
+    background-color: #f9f9f9;
+  }
+
+  .section-small {
+    background-color: #f9f9f9;
+  }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
