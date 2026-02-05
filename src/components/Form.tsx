@@ -12,7 +12,7 @@ export default function Form({ task, setTask, tasks, setTasks }: Form) {
         className='primary'
         onClick={() => {
           if (task.trim() == '') {
-            window.alert("Ingresa la tarea que deseas agregar")
+            window.alert("Please, type a task")
           } else {
             setTasks([...tasks, [task, false]])
             setTask("")
