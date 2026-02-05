@@ -57,6 +57,13 @@
   align-items: center;
 }
 
+.task-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin: 0 1rem;
+}
+
 
 
 

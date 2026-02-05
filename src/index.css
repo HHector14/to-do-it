@@ -120,6 +120,13 @@ button:focus-visible {
 
 }
 
+.finished-count {
+  text-align: right;
+  margin-right: 20px;
+  font-weight: 700;
+  color: #747bff;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
