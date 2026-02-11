@@ -3,11 +3,14 @@ import '../App.css'
 import useHandleTask from "../hooks/useHandleTask";
 import type { TaskCard } from "../types/components";
 import { LinearProgress } from "@mui/material";
-export default function TasksCard({ tasks, setTasks }: TaskCard) {
+export default function TasksCard({ tasks, setTasks, setIsOpen }: TaskCard) {
   const { getTotalTasksFinished } = useHandleTask({tasks, setTasks});
    const progress = getTotalTasksFinished() * 100 / tasks.length || 0;
   return (
     <div className='section'>
+      <button className="add" onClick={() => setIsOpen(true)}>
+       <i className="fa-solid fa-plus"></i>
+      </button>
       <h1>TO DO IT</h1>
       {tasks.length == 0 ?
           <p style={{ fontSize: '20px', fontWeight: "bold" }}>NO TASKS YET</p>
