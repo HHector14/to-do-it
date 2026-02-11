@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import '../App.css'
 import type { Form } from '../types/components'
 
-export default function Form({ task, setTask, tasks, setTasks }: Form) {
+export default function Form({ tasks, setTasks}: Form) {
+  const [task, setTask] = useState("");
   
   return (
     <div className='section-small'>
